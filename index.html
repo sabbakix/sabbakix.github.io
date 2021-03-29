@@ -47,16 +47,22 @@
         background-color: #ddd;
         color: #000;
     }
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-    }
+
     .main {
         flex:70%;
         background-color: #fff;
         padding: 20px;
-        
     }
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 80%;
+    }
+    .main h2 {
+        font-size:1rem;
+        padding-bottom:8px;
+    }
+
     .footer {
         padding: 20px;
         text-align: center;
@@ -70,7 +76,8 @@
     }
     article {
         padding: 10px 20px;
-        /*border: 1px solid #333;*/
+        margin: 20px 0;
+        border: 1px dashed #ccc;
 
     }
 </style>
@@ -88,15 +95,15 @@
     <div class="row">
         <div class="main">
             <article>
-                <h2 class="title">New update on my stuff </h2>
-                <p>New project updates comming soon.</p>
+                <h2 class="title">Choose your stack.</h2>
+                <p>Some considerations when starting a new project.</p>
             </article>
             <article>
-                <h2 class="title">Next step ahead</h2>
-                <p>Decisions to be made.</p>
+                <h2 class="title">Skill mastering: Specialization vs Generalization</h2>
+                <p>We alway facing a dilemma when trying acquire new skill. Wich direction shoudl we take: start to learn a new skill to have a broader knowledge or is best to have a more focused deep mastering of a specific subject. This is the question.</p>
             </article>
             <article>
-                <h2 class="title">Old stuff on archive</h2>
+                <h2 class="title"></h2>
                 <p>Older stuff will be available for reference.</p>
             </article>
         </div>

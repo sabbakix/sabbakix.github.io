@@ -62,6 +62,17 @@
         font-size:1rem;
         padding-bottom:8px;
     }
+    .main h4 {
+        font-size: .9rem;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+    }
+    .main code {
+        background-color: #ddd;
+        border-radius: 3px;
+        width: 100%;
+    }
 
     .footer {
         padding: 20px;
@@ -95,17 +106,41 @@
     <div class="row">
         <div class="main">
             <article>
-                <h2 class="title">Choose your stack.</h2>
-                <p>Some considerations when starting a new project.</p>
+                <h2 class="title">OpenMediaVault NAS Setup</h2>
+                <p>
+                    Time has come for a quick Nas setup. I just write this guide  for later reference.
+                </p>
+                <h4>1. System Installation</h4>
+                <p>
+                    Downloading the original iso file from the main project webpage. Once we downloaded the system image, create an usb stick and booy your system from it.
+                    The install procedure will start.
+                </p>
+                <h4>2. Installing Extra Plugins</h4>
+                <p>
+                    After the installation, I like to install the extra plugins. For that we need to ssh inside our box and execute the folowing comands:
+                    
+                    <br/>
+
+                    <code><div>
+sudo wget -O - https://github.com/OpenMediaVault-Plugin-Developers/
+packages/raw/master/install | sudo bash
+sudo apt update </div></code>
+                        <br/>
+
+                    Once added the repository, we can see new plugins list.
+                </p>
+                <h4>3. Enabling ZFS</h4>
+                <p>
+                    Zfs is not enabled by default in our OMV, but we can easily activate it.
+                    <ul>
+                        <li>System -> OMV-Extras -> Kernel -> Install Proxmox Kernel</li>
+                        <li>System -> Plugins -> openmediavault-zfs 5.0.1 -> install</li>
+                    </ul>
+                    
+
+                </p>
             </article>
-            <article>
-                <h2 class="title">Skill mastering: Specialization vs Generalization</h2>
-                <p>We alway facing a dilemma when trying acquire new skill. Wich direction shoudl we take: start to learn a new skill to have a broader knowledge or is best to have a more focused deep mastering of a specific subject. This is the question.</p>
-            </article>
-            <article>
-                <h2 class="title">OpenMediaVault Setup</h2>
-                <p><a href="omv-nas-setup.html" >Short setup instruction for late reference.</a></p>
-            </article>
+
         </div>
     </div>
     <div class="footer">
